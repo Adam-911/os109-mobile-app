@@ -37,7 +37,7 @@ export default function TaskItem({data, goTo}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
+        // padding: 13,
     },
     head: {
         flex: 1,
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
     borderBottom: {
         flex: 1,
         borderBottomWidth: 1,
-        // marginHorizontal: 20
-        borderBottomColor: '#DCDCDC'
+        marginHorizontal: 10,
+        borderBottomColor: '#DCDCDC',
+        marginVertical: 10
     }
   });

@@ -19,9 +19,10 @@ export default function Tasks({navigation}) {
 
     return(
         <View>
-            <FlatList
-                data={tasks}
-                renderItem={ListItem}
+            <FlatList 
+              style={styles.list}
+              data={tasks}
+              renderItem={ListItem}
             />
         </View>
     );
@@ -34,9 +35,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-    item: {
-        padding: 10,
-        fontSize: 18,
-        height: 44,
+    list: {
+        padding: 20,
     }
   });

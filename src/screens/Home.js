@@ -1,10 +1,15 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useContext } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { AuthContext } from '../context/context';
 
 export default function Home() {
+
+    const {signOut} = useContext(AuthContext);
+
     return(
         <View>
             <Text>Страница ГЛАВНАЯ</Text>
+            <Button title="ВЫЙТИ" onPress={() => signOut()}/>
         </View>
     );
 }
