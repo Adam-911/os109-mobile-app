@@ -15,18 +15,29 @@ export default function TaskItem({data, goTo}) {
         return `${adress}, ${phone}`;
     }
 
+    const getStatusStyle = (status) => {
+        switch (status) {
+            case 1:
+                return stylesStatus.new;
+            case 2:
+                return stylesStatus.inProgress
+            case 3:
+                return stylesStatus.excecution
+        }
+    }
+
     return(
         <TouchableOpacity  onPress={() => goTo("Обращение")}>
             <View style={styles.container}>
                 <View style={styles.head}>
-                    <Text style={styles.status}>{getStatus(status)}</Text>
+                    <Text style={getStatusStyle(status)}>{getStatus(status)}</Text>
                     <Text>800 минут назад</Text>
                 </View>
                 <View style={styles.body}>
                     <Text>{description}</Text>
                 </View>
                 <View style={styles.footer}>
-                    <Text>{footerText()}</Text>
+                    <Text style={styles.footerText}>{footerText()}</Text>
                 </View>
                 <View style={styles.borderBottom}></View>
             </View>
@@ -53,6 +64,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-end'
     },
+    footerText: {
+        color: '#1E90FF'
+    },
     status: {
         fontSize: 18,
     },
@@ -63,4 +77,19 @@ const styles = StyleSheet.create({
         borderBottomColor: '#DCDCDC',
         marginVertical: 10
     }
+  });
+
+  const stylesStatus = StyleSheet.create({
+      new: {
+          fontSize: 18,
+          color: '#32CD32'
+      },
+      inProgress: {
+          fontSize: 18,
+          color: '#FFD700'
+      },
+      excecution: {
+          fontSize: 18,
+          color: '#0000CD'
+      }
   });

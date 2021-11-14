@@ -30,6 +30,7 @@ const LoginScreenNavigator = () => {
               name="Вход"
               component={Login}
             />
+            {/* Добавить скрин восстановления пароля */}
         </Stack.Navigator>
     )
 }
