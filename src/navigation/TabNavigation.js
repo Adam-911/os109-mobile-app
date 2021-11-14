@@ -1,5 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
+import { View, Image, Text } from 'react-native';
+import TabBarItem from '../components/TabBarItem';
 import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import Report from '../screens/Report';
@@ -12,24 +14,61 @@ export default function TabNavigation() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        keyboardHidesTabBar: true
+        keyboardHidesTabBar: true,
+        tabBarShowLabel: false
       }}
     >
       <Tab.Screen 
-        name="Главная" 
-        component={Home} 
+        name="Home" 
+        component={Home}
+        options={{
+            tabBarIcon: ({focused}) => (
+                <TabBarItem
+                  label="Главная"
+                  focused={focused}
+                  iconSrc={require("../../assets/home-icon.png")}
+                />
+            )
+        }} 
       />
       <Tab.Screen 
-        name="Задачи" 
+        name="Tasks" 
         component={FirstScreenNavigator} 
+        options={{
+          tabBarIcon: ({focused}) => (
+              <TabBarItem
+                label="Задачи"
+                focused={focused}
+                iconSrc={require("../../assets/tasks-icon.png")}
+              />
+          )
+        }} 
       />
       <Tab.Screen 
-        name="Отчет" 
-        component={Report} 
+        name="Report" 
+        component={Report}
+        options={{
+          tabBarIcon: ({focused}) => (
+              <TabBarItem
+                label="Отчет"
+                focused={focused}
+                iconSrc={require("../../assets/report-icon.png")}
+              />
+          )
+        }} 
       />
       <Tab.Screen 
-        name="Профиль" 
+        name="Profile" 
         component={Profile} 
+        options={{
+          tabBarIcon: ({focused}) => (
+              <TabBarItem
+                label="Профиль"
+                focused={focused}
+                iconSrc={require("../../assets/profile-icon.png")}
+              />
+          )
+        }}
       />
     </Tab.Navigator>
   );
