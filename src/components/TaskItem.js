@@ -21,8 +21,6 @@ export default function TaskItem({data, goTo}) {
                 return stylesStatus.new;
             case 2:
                 return stylesStatus.inProgress
-            case 3:
-                return stylesStatus.excecution
         }
     }
 
@@ -88,8 +86,4 @@ const styles = StyleSheet.create({
           fontSize: 18,
           color: '#FFD700'
       },
-      excecution: {
-          fontSize: 18,
-          color: '#0000CD'
-      }
   });

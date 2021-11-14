@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { View, StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native';
 import { AuthContext } from '../context/context';
 
-export default function Login({setUserToken}) {
+export default function Login({navigation}) {
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
 
@@ -26,7 +26,7 @@ export default function Login({setUserToken}) {
                     <TouchableOpacity style={styles.buttonIn} onPress={() => signIn(username, password)}>
                         <Text style={styles.textButton}>Войти</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonFP}>
+                    <TouchableOpacity style={styles.buttonFP} onPress={() => {navigation.navigate('Восстановление пароля')}}>
                         <Text style={styles.textFP}>Забыли свой пароль?</Text>
                     </TouchableOpacity>
                 </View>

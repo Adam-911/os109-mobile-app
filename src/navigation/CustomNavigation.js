@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Appeal from "../screens/Appeal";
 import Tasks from "../screens/Tasks";
 import Login from "../screens/Login";
+import ForgotPassword from "../screens/ForgotPassword";
 
 const Stack = createStackNavigator();
 
@@ -30,7 +31,10 @@ const LoginScreenNavigator = () => {
               name="Вход"
               component={Login}
             />
-            {/* Добавить скрин восстановления пароля */}
+            <Stack.Screen
+              name="Восстановление пароля"
+              component={ForgotPassword}
+            />
         </Stack.Navigator>
     )
 }
