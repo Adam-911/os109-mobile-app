@@ -4,6 +4,8 @@ import Appeal from "../screens/Appeal";
 import Tasks from "../screens/Tasks";
 import Login from "../screens/Login";
 import ForgotPassword from "../screens/ForgotPassword";
+import Report from "../screens/Report";
+import ReportMoreDetails from "../screens/ReportMoreDetails";
 
 const Stack = createStackNavigator();
 
@@ -40,3 +42,20 @@ const LoginScreenNavigator = () => {
 }
 
 export {LoginScreenNavigator}
+
+const ReportScreenNavigator = () => {
+    return(
+      <Stack.Navigator>
+            <Stack.Screen
+              name="Отчет"
+              component={Report}
+            />
+            <Stack.Screen
+              name="Подробней"
+              component={ReportMoreDetails}
+            />
+      </Stack.Navigator>
+    )
+}
+
+export {ReportScreenNavigator}

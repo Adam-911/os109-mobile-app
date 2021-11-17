@@ -30,10 +30,8 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // flexDirection: 'column',
         backgroundColor: '#fff',
         alignItems: 'stretch',
-        // justifyContent: 'center',
     },
     head: {
         flex: 0.5,

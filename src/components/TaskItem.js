@@ -80,10 +80,12 @@ const styles = StyleSheet.create({
   const stylesStatus = StyleSheet.create({
       new: {
           fontSize: 18,
+          fontWeight: 'bold',
           color: '#32CD32'
       },
       inProgress: {
           fontSize: 18,
+          fontWeight: 'bold',
           color: '#FFD700'
       },
   });
