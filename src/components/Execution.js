@@ -1,11 +1,15 @@
 import { Camera } from 'expo-camera';
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Button, Pressable, Image } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import Camera109 from './Camera109';
+import cameraIcon from '../../assets/camera-icon.png';
+import PhotoAlbum from './PhotoAlbum';
+import testPhoto from '../../assets/test-nature.jpg'
+import { connect } from 'react-redux';
 
-export default function Execution() {
+function Execution({ navigation, photos }) {
     const [execution, setExecution] = useState();
+    // const photos = [testPhoto, testPhoto, testPhoto,]
     return(
         <View style={styles.container}>
             <Text style={styles.head}>{"Исполнение"}</Text>
@@ -16,13 +20,26 @@ export default function Execution() {
               value={execution}
               placeholder="Введите данные"
             />
-            {/* <Camera109/> */}
+            <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end', marginTop: 20}}>
+                {photos && <PhotoAlbum/>}
+                <View>
+                    <TouchableOpacity style={styles.photoButton} onPress={() => navigation.navigate('Камера')}>
+                        <Image source={cameraIcon} style={{height: 40, width: 40}}/>
+                    </TouchableOpacity>
+                </View>
+            </View>
             <TouchableOpacity style={styles.button}>
                 <Text style={styles.text}>Исполнить</Text>
             </TouchableOpacity>
         </View>
     );
 }
+
+const mapStateToProps = ({ photos }) => {
+    return { photos }
+}
+
+export default connect(mapStateToProps)(Execution);
 
 const styles = StyleSheet.create({
     container: {
@@ -57,6 +74,15 @@ const styles = StyleSheet.create({
         elevation: 3,
         backgroundColor: '#1E90FF',
         marginTop: 20
+    },
+    photoButton: {
+        alignSelf: 'center',
+        // alignItems: 'center',
+        // justifyContent: 'center',
+        borderRadius: 50,
+        backgroundColor: '#1E90FF',
+        padding: 10,
+        margin: 5,
     },
     text: {
         fontSize: 16,

@@ -7,7 +7,7 @@ import OutputWithLabel from '../components/OutputWithLabel';
 import mockData from '../mock/testAppeals.json';
 import { getStatus } from '../util/util';
 
-export default function Appeal() {
+export default function Appeal({ navigation }) {
 
     const [appealData, setAppealData] = useState(mockData[0]);
 
@@ -25,7 +25,7 @@ export default function Appeal() {
                     <OutputWithLabel data={appealData.phone} label="Телефон"/>
                     <OutputWithLabel data={appealData.operator109} label="Оператор 109"/>
                     <OutputWithLabel data={"Нет"} label="Диспетчер"/>
-                    <Execution/>
+                    <Execution navigation={navigation}/>
                 </View>
             </ScrollView>
         </KeyboardAvoidingViewWrapper>

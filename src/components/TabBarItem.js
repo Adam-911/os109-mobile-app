@@ -8,9 +8,9 @@ export default function TabBarItem({focused, iconSrc, label, iconSize = {}}) {
                 source={iconSrc}
                 resizeMode='contain'
                 style={{
-                width: iconSize.width ? iconSize.width : 25,
-                height: iconSize.height ? iconSize.height : 25,
-                tintColor: focused ? '#0000FF' : '#808080'
+                    width: iconSize.width ? iconSize.width : 25,
+                    height: iconSize.height ? iconSize.height : 25,
+                    tintColor: focused ? '#0000FF' : '#808080'
                 }}
             />
             <Text

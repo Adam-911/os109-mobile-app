@@ -6,6 +6,7 @@ import Login from "../screens/Login";
 import ForgotPassword from "../screens/ForgotPassword";
 import Report from "../screens/Report";
 import ReportMoreDetails from "../screens/ReportMoreDetails";
+import Camera109 from '../components/Camera109'
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,10 @@ const FirstScreenNavigator = () => {
             <Stack.Screen
               name="Обращение"
               component={Appeal}
+            />
+            <Stack.Screen
+              name="Камера"
+              component={Camera109}
             />
         </Stack.Navigator>
     )

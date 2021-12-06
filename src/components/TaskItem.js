@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
+import { resetPhotos } from '../redux/actions';
 import { getStatus } from '../util/util';
 
-export default function TaskItem({data, goTo}) {
+function TaskItem({data, goTo, resetPhotos}) {
 
     const {
         status,
@@ -24,8 +26,13 @@ export default function TaskItem({data, goTo}) {
         }
     }
 
+    const onPressItem = () => {
+        resetPhotos(); // Удаление фотографий из store перед открытием нового скрина
+        goTo("Обращение");
+    }
+
     return(
-        <TouchableOpacity  onPress={() => goTo("Обращение")}>
+        <TouchableOpacity  onPress={onPressItem}>
             <View style={styles.container}>
                 <View style={styles.head}>
                     <Text style={getStatusStyle(status)}>{getStatus(status)}</Text>
@@ -42,6 +49,20 @@ export default function TaskItem({data, goTo}) {
         </TouchableOpacity>
     );
 }
+
+const mapStateToProps = () => {
+    return {}
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        resetPhotos: () => {
+            dispatch(resetPhotos())
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TaskItem);
 
 const styles = StyleSheet.create({
     container: {

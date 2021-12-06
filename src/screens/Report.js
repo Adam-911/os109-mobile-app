@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, FlatList, StyleSheet } from "react-native";
 import ReportItem from "../components/ReportItem";
+import SwipeableButtonNative from "../components/SwipeableButtonNative";
 import SwipeButton from "../components/SwipeButton";
 import testData from '../mock/testAppeals.json'
 
@@ -19,7 +20,7 @@ export default function Report({ navigation }) {
 
     return(
         <View style={styles.container}>
-            {/* <SwipeButton/> */}
+            {/* <SwipeableButtonNative/> */}
             <FlatList
               style={styles.list}
               data={reports}
