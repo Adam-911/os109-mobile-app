@@ -4,6 +4,29 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-nativ
 export default function ForgotPassword({ navigation }) {
     const [phone, setPhone] = useState();
 
+    const onChangePhone = (phoneNum) => {
+        let newText = '';
+        let cleaned = ('' + phoneNum).replace(/\D/g, '');
+        console.log("first", cleaned);
+        cleaned = cleaned.substring(1); 
+        console.log("second", cleaned);
+
+        for (let i = 0; i < cleaned.length; i++) {
+            
+            if (i === 0) {
+                newText = '+7(';
+            } else if (i === 3) {
+                newText += ')';
+            } else if (i === 6) {
+                newText += '-'
+            }
+
+            newText += cleaned[i];
+        }
+
+        setPhone(newText);
+    }
+
     return(
         <View style={styles.container}>
             <View style={styles.head}>
@@ -11,9 +34,11 @@ export default function ForgotPassword({ navigation }) {
             </View>
             <TextInput
               style={styles.input}
-              onChangeText={setPhone}
+              onChangeText={onChangePhone}
+              keyboardType={'phone-pad'}
               value={phone}
               placeholder="+7 (___) ___ - __ - __"
+              maxLength={17}
             />
             <TouchableOpacity style={styles.buttonIn} onPress={() => {}}>
                 <Text style={styles.textButton}>Отправить</Text>

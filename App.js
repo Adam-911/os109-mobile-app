@@ -11,7 +11,7 @@ import store from './src/store';
 export default function App() {
 
     const [isLoading, setIsLoading] = useState(true);
-    const [userToken, setUserToken] = useState("null");
+    const [userToken, setUserToken] = useState("null"); // КАВЫЧКИ СПЕЦИАЛЬНО!
 
     // TODO: Перенести реализацию из контекста в redux
     // 1) Разбить на action'ы функции signIn и signOut
