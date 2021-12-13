@@ -4,12 +4,11 @@ import { View, Text, StyleSheet, Button, Pressable, Image } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import cameraIcon from '../../assets/camera-icon.png';
 import PhotoAlbum from './PhotoAlbum';
-import testPhoto from '../../assets/test-nature.jpg'
 import { connect } from 'react-redux';
 
 function Execution({ navigation, photos }) {
     const [execution, setExecution] = useState();
-    // const photos = [testPhoto, testPhoto, testPhoto,]
+    
     return(
         <View style={styles.container}>
             <Text style={styles.head}>{"Исполнение"}</Text>
@@ -21,7 +20,7 @@ function Execution({ navigation, photos }) {
               placeholder="Введите данные"
             />
             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end', marginTop: 20}}>
-                {photos && <PhotoAlbum/>}
+                {photos && <PhotoAlbum photos={photos}/>}
                 <View>
                     <TouchableOpacity style={styles.photoButton} onPress={() => navigation.navigate('Камера')}>
                         <Image source={cameraIcon} style={{height: 40, width: 40}}/>

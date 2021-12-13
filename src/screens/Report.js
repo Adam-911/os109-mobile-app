@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, FlatList, StyleSheet } from "react-native";
+import ButtonsBar from "../components/ButtonsBar";
 import ReportItem from "../components/ReportItem";
 import SwipeableButtonNative from "../components/SwipeableButtonNative";
 import SwipeButton from "../components/SwipeButton";
@@ -26,6 +27,7 @@ export default function Report({ navigation }) {
               data={reports}
               renderItem={ListItem}
             />
+            <ButtonsBar size='large'/>
         </View>
     )
 }
@@ -33,9 +35,10 @@ export default function Report({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'stretch'
+        alignItems: 'stretch',
+        padding: 12
     }, 
     list: {
-        padding: 20,
+
     },
 })

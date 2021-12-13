@@ -4,15 +4,14 @@ import { connect } from "react-redux";
 import cancelImage from '../../assets/cancel.png'
 import { deletePhoto } from "../redux/actions";
 
-function PhotoAlbum({ photos, deletePhoto }) {
+function PhotoAlbum({ photos, deletePhoto, editable = true}) {
 
     const elements = photos.map((photo) => {
         return(
-            // <Image style={styles.image} source={{uri: "data:image/jpg;base64," + photo}}/>
             <View>
-                <TouchableOpacity style={styles.imageButton} onPress={() => deletePhoto(photo)}>
+                {editable && <TouchableOpacity style={styles.imageButton} onPress={() => deletePhoto(photo)}>
                     <Image style={{height: 20, width: 20}} source={cancelImage}/>
-                </TouchableOpacity>
+                </TouchableOpacity>}
                 <Image style={styles.image} source={{uri: "data:image/jpg;base64," + photo}}/>
             </View>
         )
@@ -26,7 +25,7 @@ function PhotoAlbum({ photos, deletePhoto }) {
 }
 
 const mapStateToProps = ({ photos }) => {
-    return { photos };
+    return {}
 }
 
 const mapDispatchToProps = (dispatch) => {

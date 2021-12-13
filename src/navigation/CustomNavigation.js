@@ -7,6 +7,7 @@ import ForgotPassword from "../screens/ForgotPassword";
 import Report from "../screens/Report";
 import ReportMoreDetails from "../screens/ReportMoreDetails";
 import Camera109 from '../components/Camera109'
+import ReportHeader from "../components/ReportHeader";
 
 const Stack = createStackNavigator();
 
@@ -54,6 +55,9 @@ const ReportScreenNavigator = () => {
             <Stack.Screen
               name="Отчет"
               component={Report}
+              options={{
+                headerRight: () => <ReportHeader/>
+              }}
             />
             <Stack.Screen
               name="Подробней"
