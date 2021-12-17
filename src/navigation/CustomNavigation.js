@@ -8,8 +8,11 @@ import Report from "../screens/Report";
 import ReportMoreDetails from "../screens/ReportMoreDetails";
 import Camera109 from '../components/Camera109'
 import ReportHeader from "../components/ReportHeader";
+import Profile from "../screens/Profile";
 
 const Stack = createStackNavigator();
+
+// const FirstStack = createStackNavigator();
 
 const FirstScreenNavigator = () => {
     return(
@@ -68,3 +71,19 @@ const ReportScreenNavigator = () => {
 }
 
 export {ReportScreenNavigator}
+
+const ProfileScreenNavigator = () => {
+  return (
+      <Stack.Navigator>
+          <Stack.Screen
+            options={{
+              headerShown: false
+            }}
+            name="Профиль"
+            component={Profile}
+          />
+      </Stack.Navigator>     
+  )
+}
+
+export {ProfileScreenNavigator}

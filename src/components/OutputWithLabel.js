@@ -1,11 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function OutputWithLabel({data, label}) {
+export default function OutputWithLabel({data, label, styleType}) {
+
+    const getStyle = () => (
+        styleType === 'underline' ? [{}, styles.underlineData] : [styles.label, styles.data]
+    );
+
+    const [labelStyle, dataStyle] = getStyle();
+
     return(
         <View>
-            <Text style={styles.label}>{label}</Text>
-            <Text style={styles.data}>{data}</Text>
+            <Text style={labelStyle}>{label}</Text>
+            <Text style={dataStyle}>{data}</Text>
         </View>
     );
 }
@@ -23,5 +30,13 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         padding: 8,
         fontSize: 16
+    }, 
+    underlineData: {
+        overflow: 'hidden',
+        // padding: 8,
+        fontSize: 16,
+        borderBottomWidth: 1,
+        paddingVertical: 7,
+        fontWeight: 'bold',
     }
 })
