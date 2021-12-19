@@ -10,11 +10,11 @@ export default function TabBarItem({focused, iconSrc, label, iconSize = {}}) {
                 style={{
                     width: iconSize.width ? iconSize.width : 25,
                     height: iconSize.height ? iconSize.height : 25,
-                    tintColor: focused ? '#0000FF' : '#808080'
+                    tintColor: focused ? '#1E90FF' : '#808080'
                 }}
             />
             <Text
-              style={{color: focused ? '#0000FF' : '#808080', fontSize: 12}}
+              style={{color: focused ? '#1E90FF' : '#808080', fontSize: 12}}
             >
                 {label}
             </Text>
