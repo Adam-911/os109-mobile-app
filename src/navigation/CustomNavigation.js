@@ -16,7 +16,12 @@ const Stack = createStackNavigator();
 
 const FirstScreenNavigator = () => {
     return(
-        <Stack.Navigator>
+        <Stack.Navigator
+            // screenOptions={{
+            // headerStyle: {
+            // backgroundColor: '#1E90FF',
+            // }}}
+        >
             <Stack.Screen
               name="Задачи"
               component={Tasks}
@@ -37,7 +42,12 @@ export {FirstScreenNavigator}
 
 const LoginScreenNavigator = () => {
     return(
-        <Stack.Navigator>
+        <Stack.Navigator
+          // screenOptions={{
+          // headerStyle: {
+          // backgroundColor: '#1E90FF',
+          // }}}
+        >
             <Stack.Screen
               name="Вход"
               component={Login}
@@ -54,7 +64,12 @@ export {LoginScreenNavigator}
 
 const ReportScreenNavigator = () => {
     return(
-      <Stack.Navigator>
+      <Stack.Navigator
+        // screenOptions={{
+        // headerStyle: {
+        // backgroundColor: '#1E90FF',
+        // }}}
+      >
             <Stack.Screen
               name="Отчет"
               component={Report}

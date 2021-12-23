@@ -1,9 +1,13 @@
-import React from "react";
-import { View, Text, StyleSheet, Image, Button, ImageBackground } from "react-native";
+import React, { useContext } from "react";
+import { View, Text, StyleSheet, Image, Button, ImageBackground, TouchableOpacity } from "react-native";
 import profileBG from '../../assets/profileBG.png'
 import OutputWithLabel from '../components/OutputWithLabel'
+import { AuthContext } from "../context/context";
 
 export default function Profile() {
+
+    const {signOut} = useContext(AuthContext);
+
     return(
         <View style={styles.container}>
             <ImageBackground style={styles.head} source={profileBG}>
@@ -22,6 +26,11 @@ export default function Profile() {
                 <OutputWithLabel data={"Иванов Иван"} label={"Имя"} styleType="underline"/>
                 <OutputWithLabel data={"Кокшетау Су Арнасы"} label={"Организация"} styleType="underline"/>
                 <OutputWithLabel data={"Русский"} label={"Язык"} styleType="underline"/>
+
+                <TouchableOpacity style={styles.buttonOut} onPress={() => signOut()}>
+                        <Text style={styles.textButtonout}>ВЫЙТИ</Text>
+                </TouchableOpacity>
+
             </View>
         </View>
     );
@@ -61,6 +70,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         marginTop: 20,
         width: 160,
-        height: 160
-    }
+        height: 160,
+
+    },
 });

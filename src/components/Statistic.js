@@ -15,17 +15,15 @@ export default function Statistic({content, count, countColor}) {
 const styles = StyleSheet.create({
     
     container: {
-        // flex: 1,
-        // alignItems: 'stretch',
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginBottom: 10,
         paddingVertical: 12,
         paddingLeft: 12,
-        // borderWidth: 2,
+        // borderWidth: 6,
         // borderColor: '#D3D3D3',
         // backgroundColor: '#DCDCDC',
-        // borderRadius: 50,
+        borderRadius: 50,
         height: 55,
         width: 338,
         alignItems: 'center'
@@ -41,7 +39,7 @@ const styles = StyleSheet.create({
     textTotal: {
         fontSize: 18,
         lineHeight: 21,
-        // fontWeight: 'bold',
+        textDecorationLine: 'underline',
         letterSpacing: 0.25,
         color: 'black',
     },
@@ -50,6 +48,6 @@ const styles = StyleSheet.create({
         lineHeight: 21,
         fontWeight: 'bold',
         letterSpacing: 0.25,
-        color: 'black',
+        color: 'white',
     },
 })

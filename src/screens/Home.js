@@ -20,14 +20,16 @@ export default function Home() {
                 </View>
             </View>
             <View style={styles.body}>
-                <Text style={styles.bodyText}>Алматинские Тепловые Сети</Text>
-                <Text style={styles.bodyTextUnder}>Ахметов Ахмет</Text>
-                <Statistic content={"Новые заявки"} count={"6"} countColor={"#00FF00"}/>
-                <Statistic content={"Завки в работе"} count={"3"} countColor={"#F3A72E"}/>
-                <Statistic content={"Выполнено с начала месяца"} count={"28"} countColor={"#1E90FF"}/>
-                <TouchableOpacity style={styles.buttonOut} onPress={() => signOut()}>
-                    <Text style={styles.textButtonout}>ВЫЙТИ</Text>
-                </TouchableOpacity>
+                <View style={styles.content}>
+                    <Text style={styles.bodyText}>Алматинские Тепловые Сети</Text>
+                    <Text style={styles.bodyTextUnder}>Ахметов Ахмет</Text>
+                    <Statistic content={"Новые заявки"} count={"6"} countColor={"#00FF00"}/>
+                    <Statistic content={"Завки в работе"} count={"3"} countColor={"#F3A72E"}/>
+                    <Statistic content={"Выполнено с начала месяца"} count={"28"} countColor={"#1E90FF"}/>
+                    {/* <TouchableOpacity style={styles.buttonOut} onPress={() => signOut()}>
+                        <Text style={styles.textButtonout}>ВЫЙТИ</Text>
+                    </TouchableOpacity> */}
+                </View>
             </View>
         </View>
     );
@@ -44,12 +46,24 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         padding: 12,
-        backgroundColor: '#1E90FF'
+        backgroundColor: '#1E90FF',
     },
     body: {
+        // padding: 12,
+        flex: 1,
+        alignItems: 'center',
+        zIndex: -10,
+        backgroundColor: '#1E90FF',
+    },
+    content: {
         padding: 12,
         flex: 1,
         alignItems: 'center',
+        backgroundColor: '#fff',
+        borderTopLeftRadius: 16,
+        borderTopRightRadius: 16,
+        marginHorizontal: 6,
+        marginTop: 8,
     },
     headText: {
         fontFamily: 'Roboto',
@@ -66,6 +80,8 @@ const styles = StyleSheet.create({
         marginTop: 20
     },
     bodyTextUnder: {
+        fontSize: 18,
+        fontFamily: 'Roboto',
         marginVertical: 20,
         textAlign: 'center',
     },
@@ -77,26 +93,27 @@ const styles = StyleSheet.create({
         position: 'absolute',
         marginTop: 40,
         width: 160,
-        height: 160
+        height: 160,
+
     },
-    buttonOut: {
-        position: 'absolute',
-        marginTop: 400,
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingVertical: 12,
-        paddingHorizontal: 32,
-        borderRadius: 25,
-        elevation: 3,
-        backgroundColor: '#1E90FF',
-        marginVertical: 20,
-        height: 55
-      },
-      textButtonout: {
-        fontSize: 16,
-        lineHeight: 21,
-        fontWeight: 'bold',
-        letterSpacing: 0.25,
-        color: 'white',
-      }
+    // buttonOut: {
+    //     position: 'absolute',
+    //     marginTop: 400,
+    //     alignItems: 'center',
+    //     justifyContent: 'center',
+    //     paddingVertical: 12,
+    //     paddingHorizontal: 32,
+    //     borderRadius: 25,
+    //     elevation: 3,
+    //     backgroundColor: '#1E90FF',
+    //     marginVertical: 20,
+    //     height: 55
+    //   },
+    //   textButtonout: {
+    //     fontSize: 16,
+    //     lineHeight: 21,
+    //     fontWeight: 'bold',
+    //     letterSpacing: 0.25,
+    //     color: 'white',
+    //   }
   });

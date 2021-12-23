@@ -2,51 +2,61 @@
     {
         "id": 1,
         "status": 1,
-        "cardNum": "232323",
+        "cardNum": "2021K10001",
         "regDate": "2021-11-02 10:12:11",
-        "description": "СИбада asdsd asdf dsa asdf asdf dsa asdf dfsa asdf asdf asdf dsa asdf fdsa asdf",
-        "adress":  "Гагаринский дом 3",
-        "phone": "+77477140032",
-        "operator109": "Шерстяной.М.И"
+        "description": "Не идет горячая вода во всем доме",
+        "adress":  "Розыбакиева, 240",
+        "phone": "+77776548890",
+        "operator109": "Исмаилова Зарина"
     },
     {
         "id": 2,
         "status": 1,
-        "cardNum": "232323",
-        "regDate": "2021-11-02 10:12:11",
-        "description": "СИбада asdsd asdf dsa asdf asdf dsa asdf dfsa asdf asdf asdf dsa asdf fdsa asdf",
-        "adress":  "Гагаринский дом 3",
-        "phone": "+77477140032",
-        "operator109": "Шерстяной.М.И"
+        "cardNum": "2021K10002",
+        "regDate": "2021-11-01 10:12:11",
+        "description": "Прорвало теплотрассу. Перекресток Казакова-Боткина",
+        "adress":  "Казакова, 10",
+        "phone": "+77272395488",
+        "operator109": "Кожахметов Дидар"
     },
     {
         "id": 3,
         "status": 2,
-        "cardNum": "232323",
-        "regDate": "2021-11-02 10:12:11",
-        "description": "СИбада asdsd asdf dsa asdf asdf dsa asdf dfsa asdf asdf asdf dsa asdf fdsa asdf",
-        "adress":  "Гагаринский дом 3",
-        "phone": "+77477140032",
-        "operator109": "Шерстяной.М.И"
+        "cardNum": "2021K10011",
+        "regDate": "2021-11-01 10:12:11",
+        "description": "В подвале дома прорвало центральное отопление. Кипяток заливает подвал",
+        "adress":  "микрорайон Таугуль-1, 50",
+        "phone": "+77273065588",
+        "operator109": "Исмаилова Зарина"
     },
     {
         "id": 4,
         "status": 2,
-        "cardNum": "232323",
+        "cardNum": "2021K10015",
         "regDate": "2021-11-02 10:12:11",
-        "description": "СИбада asdsd asdf dsa asdf asdf dsa asdf dfsa asdf asdf asdf dsa asdf fdsa asdf",
-        "adress":  "Гагаринский дом 3",
-        "phone": "+77477140032",
-        "operator109": "Шерстяной.М.И"
+        "description": "Сильный горячий пар из люка на тротуаре",
+        "adress":  "Акан Серы, 132",
+        "phone": "+77075623349",
+        "operator109": "Кожахметов Дидар"
     },
     {
         "id": 5,
-        "status": 1,
-        "cardNum": "232323",
+        "status": 2,
+        "cardNum": "2021K10033",
         "regDate": "2021-11-02 10:12:11",
-        "description": "СИбада asdsd asdf dsa asdf asdf dsa asdf dfsa asdf asdf asdf dsa asdf fdsa asdf",
-        "adress":  "Гагаринский дом 3",
+        "description": "Нет отопления в БЦ \"Арман\"",
+        "adress":  "проспект Сейфуллина, 174",
         "phone": "+77477140032",
-        "operator109": "Шерстяной.М.И"
+        "operator109": "Исмаилова Зарина"
+    },
+    {
+        "id": 5,
+        "status": 2,
+        "cardNum": "2021K10037",
+        "regDate": "2021-11-02 10:12:11",
+        "description": "Нет отопления в здании. Акимат Жетысуского р-на",
+        "adress":  "Серикова, 2а",
+        "phone": "+77089665003",
+        "operator109": "Исмаилова Зарина"
     }
 ]
