@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { Button, StyleSheet, Text, View, Image, Pressable, TouchableOpacity } from 'react-native';
+import { Button, StyleSheet, Text, View, Image, ImageBackground, Pressable, TouchableOpacity } from 'react-native';
 import Statistic from '../components/Statistic';
+import profileBG from '../../assets/profileBG.png';
 import { AuthContext } from '../context/context';
 
 export default function Home() {
@@ -9,6 +10,18 @@ export default function Home() {
 
     return(
         <View style={styles.container}>
+
+            <ImageBackground style={styles.head} source={profileBG}>
+                <Text style={styles.headText}>iKomek 109</Text>
+                <View style={styles.iconWrapper}>
+                    <Image
+                      source={require('../../assets/profile-home-icon.png')}
+                      resizeMode='contain'
+                      style={styles.icon}
+                    />
+                </View>
+            </ImageBackground>
+{/* 
             <View style={styles.head}>
                 <Text style={styles.headText}>iKomek 109</Text>
                 <View style={styles.iconWrapper}>
@@ -18,7 +31,7 @@ export default function Home() {
                       style={styles.icon}
                     />
                 </View>
-            </View>
+            </View> */}
             <View style={styles.body}>
                 <View style={styles.content}>
                     <Text style={styles.bodyText}>Алматинские Тепловые Сети</Text>
@@ -57,10 +70,10 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#fff',
-        borderTopLeftRadius: 16,
-        borderTopRightRadius: 16,
-        marginHorizontal: 6,
-        marginTop: 8,
+        // borderTopLeftRadius: 16,
+        // borderTopRightRadius: 16,
+        // marginHorizontal: 12,
+        // marginTop: 12,
     },
     headText: {
         fontFamily: 'Roboto',
