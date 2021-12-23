@@ -73,4 +73,24 @@ const styles = StyleSheet.create({
         height: 160,
 
     },
+    buttonOut: {
+        position: 'absolute',
+        marginTop: 400,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 25,
+        elevation: 3,
+        backgroundColor: '#1E90FF',
+        marginVertical: 20,
+        height: 55
+      },
+      textButtonout: {
+        fontSize: 16,
+        lineHeight: 21,
+        fontWeight: 'bold',
+        letterSpacing: 0.25,
+        color: 'white',
+      }
 });
